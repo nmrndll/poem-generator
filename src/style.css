@@ -1,6 +1,10 @@
 body {
-    background-color: rgb(250, 132, 161);
+    background-color: #f9f7fe;
     font-family: Helvetica, Arial, sans-serif;
+}
+
+a {
+    color: #885df1;
 }
 
 .container {
@@ -15,34 +19,46 @@ header {
 h1 {
     text-align: center;
     font-weight: 800;
-    font-size: 36px;
+    font-size: 30px;
     line-height: 1.5;
-    color: #272044;
+    color: black;
+}
+
+.form-container {
+    background-color: #f5d9fc;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
+    padding: 15px 20px;
 }
 
 form {
-    padding: 30px;
-    background-color: white;
-    box-shadow: 0px 20px 60px rgba(65, 50, 100, 0.08);
-    border-radius: 10px;
     display: flex;
-    margin-bottom: 30px;
+}
+
+.hint {
+    line-height: 1.5;
+    margin-top: 10px;
+    opacity: 0.6;
+    font-size: 12px;
 }
 
 .instructions {
-    padding: 16px;
-    border: 1px solid rgb(250, 132, 161);
+    margin-top: 20px;
+    padding: 14px;
+    border: 1px solid rgba(39, 33, 66, 0.5);
     width: 80%;
     font-size: 16px;
     border-radius: 50px;
     line-height: 20px;
-    color: #272044;
+    color: black;
 }
 
 .submit-button {
+    margin-top: 20px;
     margin-left: 10px;
-    background: rgb(216, 139, 232);
-    color: white;
+    background: #89d9e5;
+    color: #f5d9fc;
     border: none;
     width: 150px;
     font-size: 16px;
@@ -52,15 +68,39 @@ form {
 
 .poem {
     font-size: 16px;
-    background-color: #fff;
+    background-color: rgb(248, 219, 255);
     padding: 20px;
     line-height: 2;
-    border-left: 3px solid rgb(216, 139, 232);
+    border-left: 3px solid #89d9e5;
     box-shadow: 0px 4px 30px 0px rgba(39, 33, 66, 0.03);
+}
+
+.hidden {
+    display: none;
+}
+
+.poem strong {
+    color: #f5d9fc;
 }
 
 footer {
     text-align: center;
     font-size: 13px;
     margin-top: 30px;
+}
+
+.generating {
+    animation: blink-animation 1s steps(7, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
+}
+
+@-webkit-keyframes blink-animation {
+    to {
+        visibility: hidden;
+    }
 }
