@@ -4,14 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://unpkg.com/typewriter-effect@latest/dist/core.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
     <link rel="stylesheet" href="src/style.css" />
     <title>AI Poem Generator</title>
 </head>
 <body>
+    <div class="container">
     <header>
     <h1>Welcome to the poem generator</h1>
 </header>
 <main>
+    <div class="form-container">
     <form id="poem-generator-form">
         <input type="text" 
         placeholder="Enter the topic of the poem" 
@@ -19,15 +22,19 @@
         required
         autocomplete="off"
         class="instructions"
+        id="user-instructions"
         />
         <input type="submit" class="submit-button" />
     </form>
+    <div class="hint">i.e: sleeping, crocheting or wine</div>
+    </div>
     <div class="poem" id="poem">
     </div>
 </main>
     <footer>
         This was coded by Naomi Randall and is open-sourced on <a href="https://github.com/nmrndll/poem-generator" target="blank">Github</a> and is hosted on <a href="https://glittering-halva-30d0e3.netlify.app" target="blank">Netlify</a>
     </footer>
+    </div>
     <script src="src/index.js"></script>
 </body>
 </html>
